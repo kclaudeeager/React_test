@@ -8,6 +8,12 @@ padding: 50px 0px 50px 0px;
 border-bottom: 1px ridge;
 min-height: 300px;
 }
+.row-contents{
+    margin: 0px auto;
+    padding: 20px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 100px;
+    }
 .footer{
 background-color: #d1c4e9;
 margin: 0px auto;
@@ -23,4 +29,9 @@ color: floralwhite;
     font-size: 80%;
     margin: 0px;
     color: #0f0f0f;
+}
+.position{
+    margin-left: 20px;
+    padding: auto;
+    
 }
