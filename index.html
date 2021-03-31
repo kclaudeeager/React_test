@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <title>Ristorante Con Fusion</title>
         <!-- Required meta tags always come first -->
         <meta charset="utf-8">
@@ -16,6 +17,30 @@
 </head>
 
 <body>
+    <style type="text/css">
+.reserve{
+    background:  #f0ab0c;
+    padding: 10px 50px 10px 50px;
+ 
+}
+.reservetable{
+    background-color:  #f0ab0c;
+    padding: 10px 30px 10px 30px;
+}
+.reserve a{
+text-decoration-line: none;
+ 
+ color: black;
+
+}
+.datetime{
+    padding: 5px;
+    width: 150px;
+    border-radius: 5px;
+ 
+
+}
+</style>
     <nav class="navbar navbar-dark navbar-expand-sm  fixed-top ">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -31,14 +56,54 @@
      
         
                     </ul>
-                    </li>
-            
-                </ul> 
+                    
+                    <span class="navbar-text">
+                        <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login</a>
+                    </span>
+        
+              
             </div>
            
         
         </div>
      </nav>
+     <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
      
    
         
@@ -49,9 +114,16 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
-                    <img src="images/logo.png" class="im-fluid">
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="images/logo.png" class="im-fluid ">
+                 
                 </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                        <a role="button" class="btn btn-block nav-link btn-warning"
+                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
+                        data-placement="bottom" href="#reserve" style="color: aliceblue;">Reserve Table</a>
+                    </div>
+              
             </div>
         </div>
     </header>
@@ -81,12 +153,20 @@
             <div  class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
+          
+                <div class="col col-sm col-md">
+                     <div class="media"> 
+                        <div class="media-body">
+                <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2> 
                 <span class="d-none d-sm-block">
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. 
+                    Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                 </span>
+                </div>
+            <img class="d-flex  img-thumbnail align-self-center" src="images/buffet.png" alt="buffet">
             </div>
+        </div>
+      
         </div>
 
         <div class="row row-content align-items-center">
@@ -109,7 +189,47 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row row-content ">
+                
+                <div class="col-8 col-md-8 col-sm-12 offset-2 ">
+                    <div class="card" id="reserve">
+                        <h3 class="card-header reservetable text-white">Reserve a Table</h3>
+                        <form>
+                   <div class="form-group row ">
+                   <label for="number"  class="col-md-2 col-form-lable">Number of Guests</label>
+                   <div class="col-md-10">
+                      
+                            <input type="radio"  id="number1" name="number" > 1
+                            <input type="radio"  id="number2" name="number" > 2
+                            <input type="radio"  id="number3" name="number" > 3
+                            <input type="radio"  id="number4" name="number" > 4
+                            <input type="radio"  id="number5" name="number" > 5
+                            <input type="radio"  id="number6" name="number" > 6
+                       
+                      
+                  </div>
+                   </div>
+                   <div class="form-group row ">
+                   <label for="datetime"  class="col-md-2 col-form-lable ">Date and Time</label>
+                   <div class="col-md-10">
+                       <input type="text" id="date" name="datetime" class="datetime" placeholder="Date" >&nbsp;&nbsp;
+                       <input type="text" id="time" name="datetime"class="datetime" placeholder="Time">
+                   </div>
+                   </div>
+                   <div class="form-group row ">
+                       <div class="offset-md-2 col-md-10">
+                   <button type="submit"  class="btn btn-primary ">Reserve</button>
+                       </div>
+                   </div>
+                </form>
+                   </div>
+                   
+               
+                    </div>
+                
+                </div>
+        </div>
+        </div>
 
     <footer class="footer">
         <div class="container">
@@ -158,5 +278,10 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 </html>
